@@ -1,57 +1,16 @@
-/* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  /* 2. Remove default margin */
-  * {
-    margin: 0;
-  }
-  
-  body {
-    /* 3. Add accessible line-height */
-    line-height: 1.5;
-    /* 4. Improve text rendering */
-    -webkit-font-smoothing: antialiased;
-  }
-  
-  /* 5. Improve media defaults */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
-  /* 6. Inherit fonts for form controls */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  
-  /* 7. Avoid text overflows */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  
-  /* 8. Improve line wrapping */
-  p {
-    text-wrap: pretty;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-  }
-  
+
   /*
     9. Create a root stacking context
   */
-  #root, #__next {
+  /* #root, #__next {
     isolation: isolate;
-  }
-
+  } */ */
 
 
   .container{
     width:100%;
     max-width: 1200px;
-    margin:12px auto;
+    margin:10px auto;
 
 
 
@@ -61,23 +20,244 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom:54px;
+
 
   }
 
   .header > h1 {
-    font-size:18px;
+    font-size:25px;
+    margin-left:100px;
+    font-family: Ubuntu, sans-serif;
+ 
+    color: rgb(111, 107, 103);
   }
   .header > .desktop-nav
   {
     display:flex;
   }
 
-  .header > .desktop-nav > p {
-    margin-left:48px;
-    font-size:18px;
+  .header > .desktop-nav > a {
+    margin-right:100px;
+    font-size:25px;
+    font-family: Ubuntu, sans-serif;
+    color: rgb(111, 107, 103);
+     text-decoration: none;
+    
   }
 
+
+  .desktop-nav > a:hover  {
+    color:#ffb300;
+  }
+
+
+
+
+  .hero{
+    
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    justify-content: space-between;
+    
+    
+
+  }
   .hero > .intro {
     max-width: 486px;
+    flex: 50%;
+    margin-left:100px;
+    margin-top: 80px;
+    font-family: Ubuntu, sans-serif;
+    
+    
   }
+
+  .intro > .intro-ict {
+    color: #ffb300;
+  }
+
+  .intro > h2 {
+    font-size: 60px;
+  }
+
+  .hero>.flex-right{
+  
+    max-width: 720px;
+    max-height: 629px;
+    justify-content: flex-end;
+
+      
+ 
+    
+  }
+
+  .flex-right img {
+    max-width: 900px;
+    max-height: 629px;
+    width: 100%; /* Ensures the image scales within the container */
+    height: auto;
+    margin-right: 100px;
+  }
+
+
+  .intro p {
+    font-size:25px;
+    color: rgb(111, 107, 103);
+    font-family: Ubuntu, sans-serif;
+    font-weight: bold;
+
+  }
+
+
+
+  .Project{
+    text-decoration: none;
+    color:black;
+    border:black;
+    background-color: #ffb300;
+    padding:15px;
+    width:100px;
+    border-radius: 10px;
+    font-size:15px;
+    font-weight: bold;
+    margin-right: 10px;
+
+  }
+
+  .LinkedIn {
+    text-decoration: none;
+    color:black;
+    
+    border-color: black;
+    padding:15px;
+    width:100px;
+    border-radius: 10px;
+    font-size:15px;
+    font-weight: bold;
+  }
+
+ 
+
+  /* PROJECT PART */
+
+  .initial-project{
+
+    margin: 120px 0 ;
+    text-align:center; 
+    font-size:50px;
+    font-family: Ubuntu, sans-serif;
+    font-weight: bold;
+
+  }
+
+  .container-project{
+    display:flex;
+    justify-content: center;
+  
+  
+   
+  }
+
+   .flex-right{
+    max-width: 496px;
+    
+    font-size:30px;
+    padding: 0;
+    margin: 0;
+    
+    
+
+  }
+
+  .flex-right > img
+  {
+    height: 524px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+   
+  }
+
+
+  .container-project > .flex-left {
+    max-width: 496px;
+    max-height: 524px;
+    border:black;
+   
+    font-family: Ubuntu, sans-serif;
+    background-color: #efecec;
+   border-top-left-radius: 20px;
+   border-bottom-left-radius: 20px;
+  
+   
+
+  
+  }
+  
+  .flex-left > p{
+    font-family: Ubuntu, sans-serif;
+    font-size: 15px;
+    text-align: justify;
+    padding:30px;
+    color:#41403f;
+    font-weight: bold;
+    
+
+
+  }
+
+  .flex-left > h2  {
+   font-size: 40px;
+   text-align: center;
+   margin-top:70px;
+  }
+
+  .flex-left > button {
+    font-family: Ubuntu, sans-serif;
+    margin-left:30px;
+    padding:10px;
+    border-radius: 20px;
+    width: 120px;
+    font-weight: bold;
+  }
+
+
+  @media (max-width: 800px) {
+    .container-project {
+      flex-direction: column;
+    }
+  }
+
+
+.footer-flex{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+.footer-flex > .link{
+  height:50px;
+
+}
+
+.footer-flex > .fb{
+  height:50px;
+  margin-bottom: 100px;
+
+}
+
+
+.footer-flex > .insta{
+  height:50px;
+
+}
+
+
+
+
+  
+
+
+
+
